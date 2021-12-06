@@ -1,3 +1,23 @@
+# Init Typescript Project
+
+## Init Project
+
+```shell
+npm init 
+```
+
+## install typescript
+
+```sh
+npm i -g typescript
+```
+## init typescript config file
+
+```sh
+tsc --init
+```
+
+```js
 {
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig.json to read more about this file */
@@ -12,7 +32,7 @@
 
     /* Language and Environment */
     "target": "es5",                                     /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    // "lib": ["ES2021"],                                       /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    // "lib": [],                                        /* Specify a set of bundled library declaration files that describe the target runtime environment. */
     // "jsx": "preserve",                                /* Specify what JSX code is generated. */
     // "experimentalDecorators": true,                   /* Enable experimental support for TC39 stage 2 draft decorators. */
     // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
@@ -47,7 +67,7 @@
     // "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
     // "sourceMap": true,                                /* Create source map files for emitted JavaScript files. */
     // "outFile": "./",                                  /* Specify a file that bundles all outputs into one JavaScript file. If `declaration` is true, also designates a file that bundles all .d.ts output. */
-    "outDir": "./build",                                   /* Specify an output folder for all emitted files. */
+    // "outDir": "./",                                   /* Specify an output folder for all emitted files. */
     // "removeComments": true,                           /* Disable emitting comments. */
     // "noEmit": true,                                   /* Disable emitting files from a compilation. */
     // "importHelpers": true,                            /* Allow importing helper functions from tslib once per project, instead of including them per-file. */
@@ -68,9 +88,9 @@
     /* Interop Constraints */
     // "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
     // "allowSyntheticDefaultImports": true,             /* Allow 'import x from y' when a module doesn't have a default export. */
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "esModuleInterop":true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
     // "preserveSymlinks": true,                         /* Disable resolving symlinks to their realpath. This correlates to the same flag in node. */
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "forceConsistentCasingInFileNames":true,            /* Ensure that casing is correct in imports. */
 
     /* Type Checking */
     "strict": true,                                      /* Enable all strict type-checking options. */
@@ -96,7 +116,51 @@
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
-  },
-  "include":["./src","./basic"],
-  // "files":[]
+  }
 }
+
+
+```
+
+## compile realtime
+
+```sh
+tsc -w ./basic/index.ts
+```
+
+## types in node
+
+*** @types/node *** 第三方没有types的时候可以安装，
+如jquery
+```sh
+npm install @types/jquery
+```
+## Run
+
+```sh
+npm i -g ts-node
+ts-node src/index.ts
+```
+## nodemon
+nodemon: 用于检测文件的变化
+
+```sh
+npm i -g nodemon
+nodemon --exec ts-node src/index.ts
+
+```
+
+配置命令到package.json
+
+```sh
+ "scripts": {
+    "ts-server": "nodemon --exec ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+```
+
+## 运行监控命令
+
+```sh
+npm run ts-server
+```

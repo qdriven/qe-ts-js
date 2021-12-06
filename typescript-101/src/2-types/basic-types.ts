@@ -44,3 +44,5 @@ enum Color {
   let colorName: string = Color[2]
 console.log(colorName)
 
+let o1 = {}
+console.log(o1)
