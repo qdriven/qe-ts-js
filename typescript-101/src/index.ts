@@ -1,4 +1,4 @@
-import { ArrayUtils } from "./generics/arrUtil";
+import { ArrayUtils } from "./2-types/generics/arrUtil";
 
 function take<T>(arr:T[],n:number):T[]{
     if (n >= arr.length) return arr

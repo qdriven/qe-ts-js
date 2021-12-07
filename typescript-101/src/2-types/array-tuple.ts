@@ -5,8 +5,8 @@ function test(){
     console.log(arguments)
 }
 
-let arr: [string, number] = ['leo', 20]
-arr.push('67')
+let arrDemo: [string, number] = ['leo', 20]
+arrDemo.push('67')
 
 console.log(arr)
 test()

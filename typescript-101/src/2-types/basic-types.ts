@@ -17,7 +17,7 @@ let age:number = 12
 const info = `My name is ${name1}, I am ${age} years old!`
 
 //undefine and null
-let u: undefined = undefined
+let undefineValue: undefined = undefined
 let n: null = null
 
 //array
